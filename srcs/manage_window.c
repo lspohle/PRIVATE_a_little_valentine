@@ -41,7 +41,7 @@ void	get_measurements(t_data *game, char *map)
 		game->mlx_width = 720;
 		game->mlx_height = 480;
 	}
-	else if (ft_strncmp(map, MAP_3, sizeof(MAP_3)) == 0)
+	else if (ft_strncmp(map, MAP_0, sizeof(MAP_0)) == 0 || ft_strncmp(map, MAP_3, sizeof(MAP_3)) == 0)
 	{
 		game->mlx_width = 1515;
 		game->mlx_height = 900;

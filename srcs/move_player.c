@@ -17,6 +17,8 @@ static int	check_move(t_data *game, int row, int column)
 		ft_printf(GREEN"\nCollected: %i 🥳\n\n"ESCAPE, (game->collectibles - game->max_collectibles) * (-1));
 		game->map[row][column] = '0';
 	}
+	else if (dst == 'R')
+		game_over(game);
 	return(1);
 }
 
