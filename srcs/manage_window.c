@@ -1,5 +1,4 @@
 #include "a_little_valentine.h"
-#include <time.h>
 
 ///////////////////////////////////////////// Providing necessities //////////////////////////////////////////////////////
 
@@ -27,27 +26,4 @@ int    close_window(t_data *game)
     mlx_destroy_window(game->mlx, game->win);
     exit(0);
 	return (1);
-}
-
-// Get width and height of the window depending on the selected map
-void	get_measurements_window(t_data *game, char *map)
-{
-	game->mlx_width = 1000;
-	game->mlx_height = 500;
-
-	if (ft_strncmp(map, MAP_1, sizeof(MAP_1)) == 0)
-	{
-		game->mlx_width = 1200;
-		game->mlx_height = 470;
-	}
-	else if (ft_strncmp(map, MAP_2, sizeof(MAP_2)) == 0)
-	{
-		game->mlx_width = 2720;
-		game->mlx_height = 480;
-	}
-	else if (ft_strncmp(map, MAP_0, sizeof(MAP_0)) == 0 || ft_strncmp(map, MAP_3, sizeof(MAP_3)) == 0)
-	{
-		game->mlx_width = 1515;
-		game->mlx_height = 900;
-	}
 }
