@@ -10,10 +10,7 @@ static void put_map_to_window(t_data *game, int row, int column)
 	else if (game->map[row][column] == '0')
 		put_image_to_window(game, EMPTY, row, column);
 	else if (game->map[row][column] == 'C')
-	{
 		put_image_to_window(game, COLLECTIBLE, row, column);
-		game->collectibles++;
-	}
 	else if (game->map[row][column] == 'E')
 		put_image_to_window(game, EXIT, row, column);
 	else if (game->map[row][column] == 'R')
@@ -27,14 +24,14 @@ static void put_map_to_window(t_data *game, int row, int column)
 }
 
 // Puts the map on the screen image by image
-void create_map(t_data *game)
+int create_map(t_data *game)
 {
 	int	row;
 	int	column;
 
-	game->collectibles = 0;
 	game->moves = 0;
-
+	if (check_map(game) == 0)
+		return (0);
 	row = -1;
 	while (++row < game->map_height)
 	{
@@ -42,5 +39,5 @@ void create_map(t_data *game)
 		while (++column < game->map_width)
 			put_map_to_window(game, row, column);
 	}
-	game->max_collectibles = game->collectibles;
+	return (1);
 }

@@ -8,7 +8,7 @@ static int	check_move(t_data *game, int row, int column)
 	char dst;
 
 	dst = game->map[row][column];
-	if (dst == '1' || (dst == 'E' && game->collectibles != 0))
+	if (game->won == true || dst == '1' || (dst == 'E' && game->collectibles != 0))
 		return (0);
 	put_image_to_window(game, EMPTY, game->row, game->column);
 	ft_printf(CYAN"Counter: %i\n"ESCAPE, ++game->moves);

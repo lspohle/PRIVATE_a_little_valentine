@@ -1,4 +1,5 @@
 #include "a_little_valentine.h"
+#include <time.h>
 
 ///////////////////////////////////////////// Providing necessities //////////////////////////////////////////////////////
 
@@ -29,7 +30,7 @@ int    close_window(t_data *game)
 }
 
 // Get width and height of the window depending on the selected map
-void	get_measurements(t_data *game, char *map)
+void	get_measurements_window(t_data *game, char *map)
 {
 	if (ft_strncmp(map, MAP_1, sizeof(MAP_1)) == 0)
 	{

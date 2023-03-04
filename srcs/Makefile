@@ -4,7 +4,7 @@ LIBFT		= libft
 
 MINILIBX	= minilibx
 
-SRCS		= play_game.c read_map.c create_map.c manage_window.c move_player.c display_output.c
+SRCS		= play_game.c manage_window.c read_map.c check_map.c create_map.c move_player.c display_output.c
 
 OBJS		= ${SRCS:.c=.o}
 
