@@ -71,11 +71,11 @@ Note that I included [MiniLibX](https://github.com/42Paris/minilibx-linux) as a 
 
 <a name="5"></a>
 # [Installation](#5)
-- Install *A Little Valentine* by cloning the current repository, and creating an alias for your little valentine. If you do not have an SSH key yet, you need to use the command using https.
+- Install *A Little Valentine* by cloning the current repository, and creating an alias for your little valentine. If you do not have an SSH key yet, you need to use the command using https. Otherwis, it is up to you to use either SSH or https.
      - SSH
       
       cd ~ && git clone git@github.com:lspohle/PRIVATE_a_little_valentine.git && cd PRIVATE_a_little_valentine/srcs && bash script.sh
-
+          
      - HTTPS
       
       cd ~ && git clone https://github.com/lspohle/PRIVATE_a_little_valentine.git && cd PRIVATE_a_little_valentine/srcs && bash script.sh
