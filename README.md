@@ -74,8 +74,10 @@ Note that I included [MiniLibX](https://github.com/42Paris/minilibx-linux) as a 
 - Install *A Little Valentine* by cloning the current repository, and creating an alias for your little valentine.
       
       cd ~ && git clone git@github.com:lspohle/PRIVATE_a_little_valentine.git && cd PRIVATE_a_little_valentine/srcs && bash script.sh
-      make -s
 
+- Compile by using the following command.
+      
+      cd ~/PRIVATE_a_little_valentine/srcs && make -s
 <a name="6"></a>
 # [Implementation](#6)
 - Ready to challenge youself? Find your love! 
@@ -90,7 +92,7 @@ https://user-images.githubusercontent.com/121381385/222758862-d51462eb-f52b-41c3
 
 https://user-images.githubusercontent.com/121381385/222758107-31ea796a-9955-430b-9f99-fc7f9fb6a129.mov
 
-<a name="7"></a>
+<a name="8"></a>
 # [Deinstallation](#8)
 - Deinstall *A Little Valentine* from your device.
       
