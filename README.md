@@ -73,7 +73,8 @@ Note that I included [MiniLibX](https://github.com/42Paris/minilibx-linux) as a 
 # [Installation](#5)
 - Install *A Little Valentine* by cloning the current repository, and creating an alias for your little valentine.
       
-      cd ~ && git clone git@github.com:lspohle/PRIVATE_a_little_valentine.git && cd PRIVATE_a_little_valentine/srcs && bash script.sh && make -s
+      cd ~ && git clone git@github.com:lspohle/PRIVATE_a_little_valentine.git && cd PRIVATE_a_little_valentine/srcs && bash script.sh
+      make -s
 
 <a name="6"></a>
 # [Implementation](#6)
