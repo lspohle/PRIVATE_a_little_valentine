@@ -65,7 +65,6 @@ typedef struct	s_data
 int		check_map(t_data *game);
 int		error(int errnum, char *description);
 void	welcome_user(t_data *game);
-void	get_measurements_window(t_data *game, char *map);
 int		read_map(t_data *game, char *map);
 int		create_map(t_data *game);
 int		play_game(int keycode, t_data *game);
