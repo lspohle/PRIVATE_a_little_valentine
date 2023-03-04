@@ -13,10 +13,10 @@ Don't allow that anyone breaks your heart and find your better half!*
 - [Play A Little Valentine and find your love](#2)
 - [Requirements for the map](#3)
 - [Benefits of A Little Valentine](#4)
-- [Examples](#4)
+- [Installation](#5)
 - [Implementation](#6)
-- [Deinstallation](#7)
-
+- [Examples](#7)
+- [Deinstallation](#8)
 
 <a name="1"></a>
 # [Introduction to the map and your role as a player](#1)
@@ -70,35 +70,31 @@ Note that I included [MiniLibX](https://github.com/42Paris/minilibx-linux) as a 
       - [x] *A Little Valentine* works on the operating system macOS. You do not need to install anything. All necessary installations are either pre-installed on macOS or included in the repository of *A Little Valentine*.
 
 <a name="5"></a>
-# [Example](#5)
+# [Installation](#5)
+- Install *A Little Valentine* by cloning the current repository, and creating an alias for your little valentine.
+      
+      cd ~ && git clone git@github.com:lspohle/PRIVATE_a_little_valentine.git && cd PRIVATE_a_little_valentine/srcs && bash script.sh && make -s
+
+<a name="6"></a>
+# [Implementation](#6)
+- Ready to challenge youself? Find your love! 
+Run the following command whenever and wherever you wish to play *A Little Valentine*. Select a different map by replacing `map2.ber` by the map of your choice. Take a look at the them in [maps](https://github.com/lspohle/PRIVATE_a_little_valentine/tree/main/maps). 
+
+       alv ../maps/map2.ber
+
+<a name="7"></a>
+# [Examples](#7)
 
 https://user-images.githubusercontent.com/121381385/222758862-d51462eb-f52b-41c3-b117-ff9856bee753.mov
 
 https://user-images.githubusercontent.com/121381385/222758107-31ea796a-9955-430b-9f99-fc7f9fb6a129.mov
 
-
-<a name="5"></a>
-# [Installation](#5)
-- Install *YOUR password, YOUR choice* by cloning the current repository, and creating an alias for your password generator.
-      
-      cd ~ && git clone https://github.com/lspohle/PRIVATE_password.git && cd PRIVATE_password && bash script.sh
-
-<a name="6"></a>
-# [Implementation](#6)
-- Implement it by running the following command whenever and wherever you wish.
-
-       gp
-
 <a name="7"></a>
-# [Deinstallation](#7)
-- Deinstall *YOUR password, YOUR choice* from your device.
+# [Deinstallation](#8)
+- Deinstall *A Little Valentine* from your device.
       
-      cd ~ && rm -rf PRIVATE_password
-- Remove the formerly created alias `gp` from your ZSH configuration file.
+      cd ~ && rm -rf PRIVATE_a_little_valentine
+- Enter your ZSH configuration file, and remove the formerly created alias `alv` from your ZSH configuration file.
 
-
-
-
-
-
+      nano ~/.zshrc
 
