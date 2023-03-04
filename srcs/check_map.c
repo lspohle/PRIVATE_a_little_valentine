@@ -57,6 +57,8 @@ int	check_map(t_data *game)
 	check_components(game);
 	if (game->player != 1 || game->exit != 1)
 		return (error(EINVAL, "The map contains more than one player/exit!\n"));
+	else if (game->collectibles <= 0)
+		return (error(EINVAL, "The map does not contain at least one collectible!\n"));
 	else if (game->components != (game->map_width) * (game->map_height))
 		return (error(EINVAL, "The map contains invalid characters!\n"));
 	else if (check_edges(game) == 0)
