@@ -9,11 +9,10 @@ int	main(int argc, char **argv)
 		t_data		game;
 
 		ft_memset(&game, 0, sizeof(t_data));	
-		get_measurements_window(&game, argv[1]);
-		game.mlx = mlx_init();
-		game.win = mlx_new_window(game.mlx, game.mlx_width, game.mlx_height, GAME);
 		if (read_map(&game, argv[1]) == 0)
 			return (error(ENOENT, ""));
+		game.mlx = mlx_init();
+		game.win = mlx_new_window(game.mlx, game.map_width * 80, game.map_height * 80, GAME);
 		if (create_map(&game) == 0)
 			return (0);
 		welcome_user(&game);
