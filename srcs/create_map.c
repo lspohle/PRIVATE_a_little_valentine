@@ -12,7 +12,11 @@ static void put_map_to_window(t_data *game, int row, int column)
 	else if (game->map[row][column] == 'C')
 		put_image_to_window(game, COLLECTIBLE, row, column);
 	else if (game->map[row][column] == 'E')
+	{
 		put_image_to_window(game, game->exit_path, row, column);
+		game->column2 = column;
+		game->row2 = row;
+	}
 	else if (game->map[row][column] == 'R')
 		put_image_to_window(game, RIVAL, row, column);
 	else if (game->map[row][column] == 'P')

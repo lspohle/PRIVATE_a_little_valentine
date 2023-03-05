@@ -12,7 +12,7 @@ static int select_exit(t_data *game, char *requested_exit)
 	else if (ft_strncmp(requested_exit, "M", sizeof("M")) == 0 ||
 			 ft_strncmp(requested_exit, "O", sizeof("O")) == 0)
 	{
-		game->exit_path = "../images/other.xpm";
+		game->exit_path = "../images/man.xpm";
 		return (2);
 	}
 	else
@@ -29,7 +29,7 @@ static int select_player(t_data *game, char *requested_player)
 	else if (ft_strncmp(requested_player, "M", sizeof("M")) == 0 ||
 			 ft_strncmp(requested_player, "O", sizeof("O")) == 0)
 	{
-		game->player_path = "../images/other.xpm";
+		game->player_path = "../images/man.xpm";
 		return (2);
 	}
 	else

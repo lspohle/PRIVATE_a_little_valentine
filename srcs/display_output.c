@@ -11,7 +11,7 @@ int	error(int errnum, char *description)
 	char	*available_maps;
 	char	*rules_map;
 
-	select_characters = "\n\nPlease select the player you favor the most and choose an image that represents your loved one.";
+	select_characters = "\nPlease select the player you favor the most and choose an image that represents your loved one.";
 	available_characters = "   - W (woman)\n   - M (man)\n   - O (others)\n";
 	select_map = "\nPlease select the map you would like to play on.";
 	available_maps = "   - ../maps/map0.ber\n   - ../maps/map1.ber\n   - ../maps/map2.ber\n   - ../maps/map3.ber\n";

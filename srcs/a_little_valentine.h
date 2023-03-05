@@ -56,6 +56,8 @@ typedef struct	s_data
 	
 	int		column;
 	int		row;
+	int		column2;
+	int		row2;
 	int		moves;
 	int		collectibles;
 	int		max_collectibles;
