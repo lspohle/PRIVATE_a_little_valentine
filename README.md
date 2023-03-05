@@ -88,7 +88,7 @@ Note that I included [MiniLibX](https://github.com/42Paris/minilibx-linux) as a 
 <a name="6"></a>
 # [Implementation](#6)
 - Ready to challenge youself? Find your love! 
-Run the following command whenever and wherever you wish to play *A Little Valentine*. Select a different map by replacing `map2.ber` by the map of your choice. Take a look at the them in [maps](https://github.com/lspohle/PRIVATE_a_little_valentine/tree/main/maps). Choose the player you identify most with - either woman, man or other. Last but not least, choose an image that shall represent your loved.
+Run the following command whenever and wherever you wish to play *A Little Valentine*. Select a different map by replacing `map2.ber` by the map of your choice. Take a look at the them in [maps](https://github.com/lspohle/PRIVATE_a_little_valentine/tree/main/maps). Choose the player you identify most with - either woman, man or other. Last but not least: choose an image that shall represent your loved one.
 
        alv ../maps/map2.ber W M
 
