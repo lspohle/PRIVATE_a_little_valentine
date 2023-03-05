@@ -37,7 +37,7 @@ int	play_game(int keycode, t_data *game)
         ft_printf(PURPLE"\nTo collect: %i 😉\n\n"ESCAPE, game->collectibles);
 	else if (keycode == 53)
 		close_window(game);
-	put_image_to_window(game, PLAYER, game->row, game->column);
+	put_image_to_window(game, game->player_path, game->row, game->column);
 
 	if (game->map[game->row][game->column] == 'E' && game->collectibles == 0)
 		congratulate_user(game);

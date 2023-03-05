@@ -5,18 +5,25 @@
 // Inform the user that the map is invalid
 int	error(int errnum, char *description)
 {
-	char	*appeal;
-	char	*instructions;
-	char	*rules;
+	char	*select_characters;
+	char	*available_characters;
+	char	*select_map;
+	char	*available_maps;
+	char	*rules_map;
 
-	appeal = "Please pass a map as an argument following the executable 'a_little_valentine'.\n";
-	instructions = "The map has to be valid:\n";
-	rules ="   - It must be rectangular.\n   - It must be surrounded by walls.\n   - It must contain exactly one exit.\n   - It must contain exactly one starting position.\n   - It must contain at least one collectible.\n";
+	select_characters = "\n\nPlease select the player you favor the most and choose an image that represents your loved one.";
+	available_characters = "   - W (woman)\n   - M (man)\n   - O (others)\n";
+	select_map = "\nPlease select the map you would like to play on.";
+	available_maps = "   - ../maps/map0.ber\n   - ../maps/map1.ber\n   - ../maps/map2.ber\n   - ../maps/map3.ber\n";
+	rules_map = "   - It must be rectangular.\n   - It must be surrounded by walls.\n   - It must contain exactly one exit.\n   - It must contain exactly one starting position.\n   - It must contain at least one collectible.\n";
 	ft_printf(RED"Error: "ESCAPE"%s\n", strerror(errnum));
-	ft_printf(RED"%s", description);
-	ft_printf(GREEN"%s"ESCAPE, appeal);
-	ft_printf("%s", instructions);
-	ft_printf(YELLOW"%s"ESCAPE, rules);
+	ft_printf(RED"%s"ESCAPE, description);
+	ft_printf(GREEN"%s"ESCAPE"\nThose are the available characters:\n", select_characters);
+	ft_printf(YELLOW"%s"ESCAPE, available_characters),
+	ft_printf(GREEN"%s"ESCAPE"\nThose are the available maps:\n", select_map);
+	ft_printf(YELLOW"%s"ESCAPE, available_maps),
+	ft_printf("The map has to be valid:\n"YELLOW"%s"ESCAPE, rules_map);
+	ft_printf("\nAn example is: "GREEN"./a_little_valentine ../maps/map2.ber M W\n\n"ESCAPE);
 	return (0);
 }
 
@@ -33,7 +40,7 @@ void	welcome_user(t_data *game)
 // Congratulates the user
 void	congratulate_user(t_data *game)
 {
-	put_image_to_window(game, REWARD, game->row, game->column);
+	put_image_to_window(game, game->reward_path, game->row, game->column);
 	if (game->won == false)
 	{
 		ft_printf(PURPLE"\n╔══════════════════════════════════════════════════╗\n");

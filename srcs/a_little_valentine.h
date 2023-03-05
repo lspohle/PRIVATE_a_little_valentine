@@ -28,9 +28,6 @@
 # define WALL "../images/wall.xpm"
 # define COLLECTIBLE "../images/heart.xpm"
 # define RIVAL "../images/broken_heart.xpm"
-# define EXIT "../images/man.xpm"
-# define PLAYER "../images/woman.xpm"
-# define REWARD "../images/couple.xpm"
 
 typedef struct	s_data
 {
@@ -51,7 +48,10 @@ typedef struct	s_data
 	int		map_width;
 	int		map_height;
 	int		player;
+	char	*player_path;
 	int		exit;
+	char	*exit_path;
+	char	*reward_path;
 	int		components;
 	
 	int		column;
@@ -66,6 +66,7 @@ int		check_map(t_data *game);
 int		error(int errnum, char *description);
 void	welcome_user(t_data *game);
 int		read_map(t_data *game, char *map);
+int 	select_characters(t_data *game, char *requested_player, char *requested_exit);
 int		create_map(t_data *game);
 int		play_game(int keycode, t_data *game);
 void	put_image_to_window(t_data *game, char *relative_path, int row, int column);

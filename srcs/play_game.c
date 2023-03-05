@@ -4,7 +4,7 @@
 
 int	main(int argc, char **argv)
 {
-	if (argc == 2)
+	if (argc == 4)
 	{
 		t_data		game;
 
@@ -13,6 +13,8 @@ int	main(int argc, char **argv)
 			return (error(ENOENT, ""));
 		game.mlx = mlx_init();
 		game.win = mlx_new_window(game.mlx, game.map_width * 80, game.map_height * 80, GAME);
+		if (select_characters(&game, argv[2], argv[3]) == 0)
+			return (error(EINVAL, "The amount of arguments is invalid!\n"));
 		if (create_map(&game) == 0)
 			return (0);
 		welcome_user(&game);
