@@ -19,11 +19,6 @@
 # define RED "\e[38;5;196m"
 # define ESCAPE "\033[0m"
 
-# define MAP_0 "../maps/map0.ber"
-# define MAP_1 "../maps/map1.ber"
-# define MAP_2 "../maps/map2.ber"
-# define MAP_3 "../maps/map3.ber"
-
 # define EMPTY "../images/empty.xpm"
 # define WALL "../images/wall.xpm"
 # define COLLECTIBLE "../images/heart.xpm"

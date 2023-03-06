@@ -45,21 +45,21 @@ static int	check_move_exit(t_data *game, int row, int column)
 // Creates hooks so that the user can control the player
 int	play_game(int keycode, t_data *game) 
 {	
-	if (keycode == 123 && check_move_player(game, game->row, game->column - 1) == 1)
+	if (keycode == 123 && game->won == false && check_move_player(game, game->row, game->column - 1) == 1)
 		game->column--;
-	else if (keycode == 124 && check_move_player(game, game->row, game->column + 1) == 1)
+	else if (keycode == 124 && game->won == false && check_move_player(game, game->row, game->column + 1) == 1)
 		game->column++;
-	else if (keycode == 125 && check_move_player(game, game->row + 1, game->column) == 1)
+	else if (keycode == 125 && game->won == false && check_move_player(game, game->row + 1, game->column) == 1)
 		game->row++;
-	else if (keycode == 126 && check_move_player(game, game->row - 1, game->column) == 1)
+	else if (keycode == 126 && game->won == false && check_move_player(game, game->row - 1, game->column) == 1)
 		game->row--;
-	else if (keycode == 0 && check_move_exit(game, game->row2, game->column2 - 1) == 1)
+	else if (keycode == 0 && game->won == false && check_move_exit(game, game->row2, game->column2 - 1) == 1)
 		game->column2--;
-	else if (keycode == 2 && check_move_exit(game, game->row2, game->column2 + 1) == 1)
+	else if (keycode == 2 && game->won == false && check_move_exit(game, game->row2, game->column2 + 1) == 1)
 		game->column2++;
-	else if (keycode == 1 && check_move_exit(game, game->row2 + 1, game->column2) == 1)
+	else if (keycode == 1 && game->won == false && check_move_exit(game, game->row2 + 1, game->column2) == 1)
 		game->row2++;
-	else if (keycode == 13 && check_move_exit(game, game->row2 - 1, game->column2) == 1)
+	else if (keycode == 13 && game->won == false && check_move_exit(game, game->row2 - 1, game->column2) == 1)
 		game->row2--;
 	else if (keycode == 48)
         ft_printf(PURPLE"\nTo collect: %i 😉\n\n"ESCAPE, game->collectibles);
