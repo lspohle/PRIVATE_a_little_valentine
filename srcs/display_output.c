@@ -14,7 +14,7 @@ int	error(int errnum, char *description)
 	select_characters = "\nPlease select the player you favor the most and choose an image that represents your loved one.";
 	available_characters = "   - W (woman)\n   - M (man)\n   - O (others)\n";
 	select_map = "\nPlease select the map you would like to play on.";
-	available_maps = "   - ../maps/map0.ber\n   - ../maps/map1.ber\n   - ../maps/map2.ber\n   - ../maps/map3.ber\n";
+	available_maps = "   - ../maps/map0.ber\n   - ../maps/map1.ber\n   - ../maps/map2.ber\n   - ../maps/map3.ber\n   - ../maps/map4.ber\n";
 	rules_map = "   - It must be rectangular.\n   - It must be surrounded by walls.\n   - It must contain exactly one exit.\n   - It must contain exactly one starting position.\n   - It must contain at least one collectible.\n";
 	ft_printf(RED"Error: "ESCAPE"%s\n", strerror(errnum));
 	ft_printf(RED"%s"ESCAPE, description);
